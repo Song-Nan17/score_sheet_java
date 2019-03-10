@@ -6,4 +6,4 @@ build
 *.iws
 out
 .DS_Store
-Test.java
+Test.*
