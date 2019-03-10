@@ -1,7 +1,17 @@
 package service;
 
+import tools.Input;
+import tools.Print;
+
 public class AddStudent {
+
     public static void addStudent() {
-        System.out.println("add student");
+        Print.promptToInputInfo();
+        String input = Input.getInput();
+        while (!CheckInput.isCorrectInfoFormat(input)) {
+            Print.promptCorrectInfoFormat();
+            input = Input.getInput();
+        }
+        Add.addStudent(input);
     }
 }
