@@ -16,7 +16,7 @@ public class Print {
         System.out.print("请按正确的格式输入要打印的学生的学号（格式： 学号, 学号,...），按回车提交：");
     }
 
-    public static void finishAdding() {
-        System.out.println("学生xxx的成绩被添加");
+    public static void finishAdding(String name) {
+        System.out.println("学生" + name + "的成绩被添加");
     }
 }

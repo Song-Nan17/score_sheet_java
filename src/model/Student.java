@@ -14,7 +14,7 @@ public class Student {
         this.id = id;
         this.scores = scores;
         this.totalScore = computeTotalScore();
-        this.averageScore = this.totalScore / this.scores.size();
+        this.averageScore = this.scores.size() == 0 ? 0 : this.totalScore / this.scores.size();
     }
 
     public double computeTotalScore() {
