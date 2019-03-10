@@ -2,8 +2,8 @@ package service;
 
 import com.alibaba.fastjson.JSON;
 import model.Student;
+import tools.DataFile;
 import tools.Print;
-import tools.StudentsDataFile;
 
 import java.util.*;
 
@@ -15,11 +15,11 @@ public class Add {
         String id = infos.get(1);
         Map<String, Double> scores = getScoreMap(infos);
 
-        String studentsStr = StudentsDataFile.read();
+        String studentsStr = DataFile.read("./students.txt");
         List<Student> students = JSON.parseArray(studentsStr, Student.class);
         students = students == null ? new ArrayList<>() : students;
         students.add(new Student(name, id, scores));
-        StudentsDataFile.write(JSON.toJSONString(students));
+        DataFile.write(JSON.toJSONString(students), "./students.txt");
 
         Print.finishAdding(name);
     }
