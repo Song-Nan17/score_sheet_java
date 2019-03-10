@@ -14,6 +14,10 @@ public class CheckInput {
         return isCorrect;
     }
 
+    public static boolean isCorrectIdFormat(String input) {
+        return true;
+    }
+
     public static boolean isNumberic(String str) {
         Pattern pattern = Pattern.compile("-?[0-9]+\\.?[0-9]*");
         return pattern.matcher(str).matches() ? true : false;
