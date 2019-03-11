@@ -15,7 +15,7 @@ public class CheckInput {
     }
 
     public static boolean isCorrectIdFormat(String input) {
-        return true;
+        return Arrays.stream(input.split("，")).anyMatch(id -> isNumberic(id));
     }
 
     public static boolean isNumberic(String str) {

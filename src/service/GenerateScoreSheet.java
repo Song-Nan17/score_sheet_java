@@ -1,6 +1,5 @@
 package service;
 
-import tools.DataFile;
 import tools.Input;
 import tools.Print;
 
@@ -12,8 +11,7 @@ public class GenerateScoreSheet {
             Print.promptCorrectIdFormat();
             input = Input.getInput();
         }
-        String scoreSheet = GetScoreSheet.getScoreSheet();
-        DataFile.write(scoreSheet, "./scoreSheet.txt");
-        System.out.println(scoreSheet);
+        String scoreSheet = GetScoreSheet.getScoreSheet(input);
+        Print.print(scoreSheet);
     }
 }

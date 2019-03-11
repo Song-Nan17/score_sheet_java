@@ -29,4 +29,8 @@ public class Print {
     public static void finishAdding(String name) {
         System.out.println("学生" + name + "的成绩被添加");
     }
+
+    public static void print(String string) {
+        System.out.println(string);
+    }
 }

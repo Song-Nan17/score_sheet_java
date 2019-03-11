@@ -23,7 +23,7 @@ public class Student {
 
     public double computeAverageScore() {
         double average = this.scores.size() == 0 ? 0 : this.totalScore / this.scores.size();
-        return Math.round(average * 10) / 10.0;
+        return Math.round(average * 100) / 100.0;
     }
 
     public String getName() {
