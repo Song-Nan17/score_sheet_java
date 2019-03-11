@@ -14,11 +14,16 @@ public class Student {
         this.id = id;
         this.scores = scores;
         this.totalScore = computeTotalScore();
-        this.averageScore = this.scores.size() == 0 ? 0 : this.totalScore / this.scores.size();
+        this.averageScore = computeAverageScore();
     }
 
     public double computeTotalScore() {
         return this.scores.values().stream().reduce(0.0, Double::sum);
+    }
+
+    public double computeAverageScore() {
+        double average = this.scores.size() == 0 ? 0 : this.totalScore / this.scores.size();
+        return Math.round(average * 10) / 10.0;
     }
 
     public String getName() {
